@@ -63,13 +63,16 @@
     cursor: pointer;
 }
 @media (max-width: 990px) {
+  .action-btn {
+    z-index: 1000;
+  }
   .action-btn.action-write-post-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #F06594;
     border-radius: 40px;
-    z-index: 1000;
+    z-index: 500;
   }
   .action-write-post-btn-img {
     margin: 0;

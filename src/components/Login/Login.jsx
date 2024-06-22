@@ -1,4 +1,5 @@
 import "./Login.css";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 
@@ -8,7 +9,7 @@ import crossImg from "../../assets/cross.svg";
 
 import userImg from "../../backendData/siddharth-img.png";
 
-export default function Login({setLoginShowState, setSignupShowState}) {
+export default function Login() {
   const { user, dispatch } = useContext(Context);
 
   const handleSubmit = (e) => {
@@ -20,18 +21,19 @@ export default function Login({setLoginShowState, setSignupShowState}) {
     };
     dispatch({type: "LOGIN_START"});
     dispatch({type: "LOGIN_SUCCESS", payload: userData});
+    window.location.replace("/");
   };
 
   return (
     <>
       <div className="login-bg-con">
         <div className="login-con">
-          <img onClick={() => {setLoginShowState(false); setSignupShowState(false)}}
+          <Link to="/" className="cancel-btn-img-con"><img
             src={crossImg}
             alt="cancel-btn"
             className="cancel-btn-img"
             loading="lazy"
-          />
+          /></Link>
           <div className="login-main-con">
             <div className="login-info">
               Let's learn, share & inspire each other with our passion for
@@ -43,7 +45,10 @@ export default function Login({setLoginShowState, setSignupShowState}) {
                 <input className="input-details" type="email" placeholder="Email" />
                 <input className="input-details" type="password" placeholder="Password" />
 
-                <button className="create-account-btn" onClick={handleSubmit}>Sign In</button>
+                <div className="create-account-btn-con">
+                  <button className="create-account-btn" onClick={handleSubmit}>Sign In</button>
+                  <Link to="/signup"><div className="mobile-login-link">or, Create Account</div></Link>
+                </div>
 
                 <button className="sign-third-party" onClick={handleSubmit}>
                   <img src={fbLogo} alt="facebook-logo" className="third-party-logo" loading="lazy" />
@@ -60,12 +65,11 @@ export default function Login({setLoginShowState, setSignupShowState}) {
               <div className="login-side-con">
                 <div className="login-side-header">
                   Don't have an account yet?{" "}
-                  <span 
+                  <Link to="/signup"><span
                     style={{fontWeight: 600, color: "#2f6ce5", cursor: "pointer"}}
-                    onClick={() => {setLoginShowState(false); setSignupShowState(true)}}
                   >
                     Create new for free!
-                  </span>
+                  </span></Link>
                 </div>
                 <img src={loginImg} alt="login-side-img" className="login-side-img" loading="lazy" />
               </div>

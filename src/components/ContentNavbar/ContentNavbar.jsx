@@ -1,5 +1,6 @@
 import "./ContentNavbar.css";
-import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
 import { Context } from "../../context/Context";
 
 import arrowDownImg from "../../assets/arrow-down.svg";
@@ -11,7 +12,6 @@ import writePostLogo from "../../assets/write-post.svg";
 
 export default function ContentNavbar() {
   const { user } = useContext(Context);
-  const [showMobileFilterLinks, setShowMobileFilterLinks] = useState(false);
 
   return (
     <div className="top-bar">
@@ -33,10 +33,10 @@ export default function ContentNavbar() {
           </picture>
         </button>
         {!user ?
-          <button className="action-btn action-join-group-btn">
+          <Link to="/signup"><button className="action-btn action-join-group-btn">
             <img src={groupJoinIcon} alt="group-img" className="action-group-btn-img" loading="lazy" />
             <div>Join Group</div>
-          </button> :
+          </button></Link> :
           <button className="action-btn action-leave-group-btn">
             <img src={groupLeaveIcon} alt="group-img" className="action-group-btn-img" loading="lazy" />
             <div>Leave Group</div>
