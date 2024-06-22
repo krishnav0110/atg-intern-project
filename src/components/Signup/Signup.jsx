@@ -11,7 +11,7 @@ import userImg from "../../backendData/siddharth-img.png";
 import { Link } from "react-router-dom";
 
 export default function Signup() {
-  const { user, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
 
   const handleSubmit = (e) => {
     e.preventDefault();

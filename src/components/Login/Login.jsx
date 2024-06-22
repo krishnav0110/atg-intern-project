@@ -10,7 +10,7 @@ import crossImg from "../../assets/cross.svg";
 import userImg from "../../backendData/siddharth-img.png";
 
 export default function Login() {
-  const { user, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
 
   const handleSubmit = (e) => {
     e.preventDefault();

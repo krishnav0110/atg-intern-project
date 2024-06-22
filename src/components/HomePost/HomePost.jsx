@@ -12,13 +12,13 @@ export default function HomePost({post}) {
   const [optionsDropDown, setOptionsDropDown] = useState(false);
 
   const getPostTypeEmoji = (postType) => {
-    if(postType == "Article") {
+    if(postType === "Article") {
       return "✍️";
-    } else if(postType == "Education") {
+    } else if(postType === "Education") {
       return "🔬️";
-    } else if(postType == "Meetup") {
+    } else if(postType === "Meetup") {
       return "🗓️";
-    } else if(postType == "Job") {
+    } else if(postType === "Job") {
       return "💼️";
     } else {
       return "";

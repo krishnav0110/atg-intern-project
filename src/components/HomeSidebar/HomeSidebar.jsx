@@ -28,7 +28,7 @@ export default function HomeSidebar() {
       <div className="location-input-con">
         <img src={locationLogo} alt="location-img" className="location-input-img" loading="lazy" />
         <input className="location-input" type="text" placeHolder="Enter your location" value={location} onChange={(e) => setLocation(e.target.value)} />
-        {location == "" ?
+        {location === "" ?
           <img src={crossImg} alt="cross-img" className="location-cross-img" loading="lazy" /> :
           <img src={editPenImg} alt="edit-pen-img" className="location-cross-img" onClick={() => setLocation("")} loading="lazy" />
         }

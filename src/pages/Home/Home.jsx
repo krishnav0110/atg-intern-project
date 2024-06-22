@@ -1,6 +1,4 @@
 import "./Home.css";
-import { useContext } from "react";
-import { Context } from "../../context/Context";
 
 import Navbar from "../../components/Navbar/Navbar";
 import ContentNavbar from "../../components/ContentNavbar/ContentNavbar";
@@ -12,8 +10,6 @@ import bgImage from "../../assets/bg.png";
 
 
 export default function Home() {
-  const { user } = useContext(Context);
-
   return (
     <>
       <Navbar />
