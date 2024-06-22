@@ -1,0 +1,48 @@
+.group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.group-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.group-name {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.group-follow-btn {
+    margin: auto 0;
+    padding: 8px 15px;
+    background-color: #eee;
+    border-radius: 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+.group-followed-btn {
+    margin: auto 0;
+    padding: 8px 15px;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    border: none;
+}
+
+.group-more-link {
+    margin-top: 50px;
+    color: rgb(45, 94, 199);
+    align-self: end;
+}

@@ -1,0 +1,79 @@
+.navbar-con {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    gap: 20px;
+    z-index: 500;
+}
+@media (max-width: 990px) {
+  .navbar-con {
+    width: 100%;
+    background-color: #00000000;
+  }
+}
+
+.navbar-logo {
+    width: 140px;
+    padding: 0 50px;
+}
+@media (max-width: 990px) {
+  .navbar-logo {
+    width: 20px;
+    padding: 10px 30px;
+  }
+}
+
+.nav-search-bar {
+    padding: 0 10px;
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    display: flex;
+}
+@media (max-width: 990px) {
+  .nav-search-bar {
+    display: none;
+  }
+}
+.nav-search-input {
+    padding-left: 10px;
+    width: 300px;
+    padding: 10px;
+    background-color: inherit;
+    font-size: 15px;
+    border: none;
+}
+.nav-search-input:focus {
+    outline: none;
+}
+
+.navbar-login {
+    margin-right: 120px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+@media (max-width: 990px) {
+  .navbar-login {
+    display: none;
+  }
+}
+.nav-user-pic {
+    width: 40px;
+    object-fit: cover;
+}
+.nav-user-name {
+    margin-left: 10px;
+}
+.nav-login:nth-child(2) {
+    margin-left: 5px;
+    color: #4C6FF5;
+    font-weight: bold;
+}
+.nav-login:nth-child(3) {
+    margin-left: 10px;
+}
